@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentInfoController;
+use App\Http\Controllers\createStudentInfo;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('student',[StudentInfoController::class, 'index'])->name('student.index');
+Route::get('student/create',[StudentInfoController::class, 'create'])->name('student.create');

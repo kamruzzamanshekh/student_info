@@ -9,14 +9,15 @@
 </head>
 <body>
     <form action="">
-        <label for=""></label>
-        <input type="text" value="fName">
-        <label for=""></label>
-        <input type="text" value="lname">
-        <label for=""></label>
-        <input type="email" value="">
-        <label for=""></label>
-        <input type="number" value="">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="phone">Phone Number</label>
+        <input type="number" name="phone">
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
