@@ -9,7 +9,10 @@ class StudentInfoController extends Controller
 {
     public function index()
     {
-        return view('frontend.studentInfoView');
+        $student=Student::all();
+        return view('frontend.studentInfoView',[
+            'students'=>$student,
+        ]);
     }
     public function create()
     { 

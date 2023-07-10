@@ -9,5 +9,11 @@
 <body>
     <p>Welcome</p>
    <button><a href="{{route('student.create')}}">Create Student Account</a></button>
+   <ol>
+    @foreach ($students as $student)
+        <li>{{$student->first_name." ".$student->last_name." ".$student->email." ".$student->phone}}</li>
+    @endforeach
+    <li></li>
+   </ol>
 </body>
 </html>
