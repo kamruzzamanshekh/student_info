@@ -18,5 +18,6 @@ use App\Http\Controllers\createStudentInfo;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('student',[StudentInfoController::class, 'index'])->name('student.index');
-Route::get('student/create',[StudentInfoController::class, 'create'])->name('student.create');
+Route::get('students',[StudentInfoController::class, 'index'])->name('student.index');
+Route::get('students/create',[StudentInfoController::class, 'create'])->name('student.create');
+Route::post('students',[StudentInfoController::class, 'store'])->name('student.store');

@@ -14,4 +14,13 @@ class StudentInfoController extends Controller
     { 
         return view('backend.createStudentInfo');
     }
+    public function store(Request $request)
+    {
+     dd($request->fname);
+    //  Person::create([
+    //  'first_name'=> $request->fname,
+    //  'last_name'=> $request->lname,
+    //  'phone'=> $request->phone,
+    //  ]);
+    }
 }
