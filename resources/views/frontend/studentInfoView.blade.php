@@ -8,5 +8,6 @@
 </head>
 <body>
     <p>Welcome</p>
+   <button><a href="{{route('student.create')}}">Create Student Account</a></button>
 </body>
 </html>

@@ -19,5 +19,7 @@
         <input type="number" name="phone">
         <button type="submit">Submit</button>
     </form>
+    <button><a href="{{route('student.index') }}">Student List View</a></button>
+
 </body>
 </html>
