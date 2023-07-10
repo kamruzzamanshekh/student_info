@@ -16,7 +16,7 @@ class StudentInfoController extends Controller
     }
     public function store(Request $request)
     {
-     dd($request->fname);
+    //  dd($request->fname);
     //  Person::create([
     //  'first_name'=> $request->fname,
     //  'last_name'=> $request->lname,
