@@ -22,3 +22,5 @@ Route::get('students',[StudentInfoController::class, 'index'])->name('student.in
 Route::get('students/create',[StudentInfoController::class, 'create'])->name('student.create');
 Route::post('students',[StudentInfoController::class, 'store'])->name('student.store');
 Route::get('students/show/{id}', [StudentInfoController::class, 'show'])->name('student.show');
+Route::get('students/edit/{id}', [StudentInfoController::class, 'edit'])->name('student.edit');
+Route::patch('students/update/{id}', [StudentInfoController::class, 'update'])->name('student.update');

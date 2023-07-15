@@ -41,5 +41,21 @@ class StudentInfoController extends Controller
         compact('student')
     );
 
+    } public function edit($id)
+    {
+        $student=Student::find($id);
+        return view('frontend.editStudentView',
+        compact('student')
+    );
+    }
+    public function update($id, Request $request)
+    {
+        $student=Student::find($id);
+        $student->update([
+            'first_name'=>$request->fname,
+            'last_name'=>$request->lname,
+            'email'=>$request->email,
+            'phone'=> $request->phone
+        ]);
     }
 }

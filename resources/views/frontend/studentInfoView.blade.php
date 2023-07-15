@@ -13,7 +13,7 @@
     @foreach ($students as $student)
         <li>{{$student->first_name." ".$student->last_name." ".$student->email." ".$student->phone}}
             <a href="{{route('student.show',$student->id)}}">Show</a>
-            <a href="">Edit</a>
+            <a href="{{route('student.edit', $student->id)}}">Edit</a>
             <a href="">Delete</a>
         </li>
 
