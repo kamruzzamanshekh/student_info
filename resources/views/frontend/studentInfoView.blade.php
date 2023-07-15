@@ -14,7 +14,12 @@
         <li>{{$student->first_name." ".$student->last_name." ".$student->email." ".$student->phone}}
             <a href="{{route('student.show',$student->id)}}">Show</a>
             <a href="{{route('student.edit', $student->id)}}">Edit</a>
-            <a href="">Delete</a>
+            <form action="{{route('student.delete', $student->id)}}" method="POST">
+                @method('DELETE');
+                @csrf
+                <button type="submit">Delete</button>
+            </form>
+
         </li>
 
     @endforeach

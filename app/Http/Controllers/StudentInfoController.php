@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateStudentRequest;
 use App\Models\Student;
 
 class StudentInfoController extends Controller
@@ -32,6 +33,7 @@ class StudentInfoController extends Controller
         'email' => $request->email,
         'phone' => $request->phone,
     ]);
+    return redirect()->route('student.index');
     }
 
     public function show($id)
@@ -48,7 +50,7 @@ class StudentInfoController extends Controller
         compact('student')
     );
     }
-    public function update($id, Request $request)
+    public function update($id, UpdateStudentRequest $request)
     {
         $student=Student::find($id);
         $student->update([
@@ -57,5 +59,13 @@ class StudentInfoController extends Controller
             'email'=>$request->email,
             'phone'=> $request->phone
         ]);
+        return redirect()->route('student.index')->with(['message'=>'Update Successful']);
+    }
+    public function delete($id)
+    {
+        $student=Student::find($id);
+        $student->delete();
+        return redirect()->route('student.index')->with(['message'=>'Successfully deleted Record']);
+
     }
 }
