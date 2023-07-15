@@ -8,6 +8,15 @@
 
 </head>
 <body>
+    <div>
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <li>{{$error}}</li>
+
+        @endforeach
+
+        @endif
+    </div>
     <form action="{{route('student.store')}}" method="POST">
         @csrf
         <label for="fname">First Name</label>
@@ -18,7 +27,7 @@
         <input type="email" name="email" id="email">
         <label for="phone">Phone</label>
         <input type="number" name="phone" id="phone">
-        <button type="submit">Submit</button>
+        <button type="submit">Create</button>
     </form>
     <button><a href="{{route('student.index') }}">Student List View</a></button>
 

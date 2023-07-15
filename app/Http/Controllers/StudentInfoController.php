@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateStudentRequest;
+use App\Http\Requests\CreateStudentRequest;
 use App\Models\Student;
 
 class StudentInfoController extends Controller
@@ -19,7 +20,7 @@ class StudentInfoController extends Controller
     {
         return view('backend.createStudentInfo');
     }
-    public function store(Request $request)
+    public function store(CreateStudentRequest $request)
     {
     //  dd($request->fname);
     //  Person::create([
