@@ -11,9 +11,13 @@
    <button><a href="{{route('student.create')}}">Create Student Account</a></button>
    <ol>
     @foreach ($students as $student)
-        <li>{{$student->first_name." ".$student->last_name." ".$student->email." ".$student->phone}}</li>
+        <li>{{$student->first_name." ".$student->last_name." ".$student->email." ".$student->phone}}
+            <a href="{{route('student.show',$student->id)}}">Show</a>
+            <a href="">Edit</a>
+            <a href="">Delete</a>
+        </li>
+
     @endforeach
-    <li></li>
    </ol>
 </body>
 </html>

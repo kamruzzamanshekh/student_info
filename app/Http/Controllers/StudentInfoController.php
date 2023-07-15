@@ -15,7 +15,7 @@ class StudentInfoController extends Controller
         ]);
     }
     public function create()
-    { 
+    {
         return view('backend.createStudentInfo');
     }
     public function store(Request $request)
@@ -32,5 +32,14 @@ class StudentInfoController extends Controller
         'email' => $request->email,
         'phone' => $request->phone,
     ]);
+    }
+
+    public function show($id)
+    {
+        $student=Student::find($id);
+        return view('frontend.studentView',
+        compact('student')
+    );
+
     }
 }
